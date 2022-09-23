@@ -40,6 +40,9 @@ def root_site():
 
 from project.server.auth.views import auth_blueprint
 app.register_blueprint(auth_blueprint)
+from project.server.user.views import users_blueprint
+app.register_blueprint(users_blueprint)
+
 
 @app.cli.command()
 @click.option('--coverage/--no-coverage', default=False,

@@ -4,8 +4,13 @@
 
 ### Basics
 
-1. Activate a virtualenv
-1. Install the requirements
+1. Activate a virtualenv : 
+   1. python3 -m venv venv
+   2. . venv/bin/activate
+   3. pip install Flask
+2. Install the requirements: 
+   1. install postgresql frist: brew install postgresql
+   2. pip install -r requirements.txt
 
 ### Set Environment Variables
 
@@ -30,6 +35,9 @@ $ flask db init
 $ flask db migrate
 $ flask db upgrade
 ```
+deactivate
+pip uninstall flask
+source venv/bin/activate
 
 ### Run the Application
 
