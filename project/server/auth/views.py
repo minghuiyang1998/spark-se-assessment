@@ -40,7 +40,7 @@ class RegisterAPI(MethodView):
                     'message': 'Successfully registered.',
                     'auth_token': auth_token
                 }
-                return make_response(responseObject), 201
+                return make_response(jsonify(responseObject)), 201
             except Exception as e:
                 responseObject = {
                     'status': 'fail',
