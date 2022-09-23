@@ -1,2 +1,2 @@
-web: gunicorn --chdir project/server/ __init__:app
+web: chmod +x deploy.sh && ./deploy.sh  
 heroku ps:scale web=1
