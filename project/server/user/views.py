@@ -6,7 +6,7 @@ from project.server.models import User
 
 users_blueprint = Blueprint('users', __name__)
 
-class RegisterAPI(MethodView):
+class GetUsersAPI(MethodView):
     """
     list all users
     """
@@ -25,7 +25,7 @@ class RegisterAPI(MethodView):
         return make_response(responseObject), 201
 
 # define the API resources
-users_view = RegisterAPI.as_view('users_api')
+users_view = GetUsersAPI.as_view('users_api')
 
 # add Rules for API Endpoints
 users_blueprint.add_url_rule(
